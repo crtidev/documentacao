@@ -2,6 +2,11 @@
 
 A seguir será descrita a API REST do CRTI ERP, seu ciclo de vida, e como utiliza-la. O Swagger da API pública pode ser visualizada em *https://endereco_da_app/api*, com o usuário logado no ERP. Existem 2 tipos de autenticação com o ERP, via login e senha e via chave de autenticação. Para novos softwares clientes do ERP, como aplicativos ou frontends, utilizar a API de login e senha. Para aplicações B2B (Business to Business), utilizar chave de autenticação.
 
+Alguns exemplos de utilização:
+
+- ***Chave de Autenticação***: Integração com outros ERP, integração com softwares de BI, integração com CRM, etc.
+- ***Login e senha (Request/Refresh Tokens)***: Aplicativos para smartphones/tablets, software desktop, frontend customizado para o ERP, etc.
+
 ## Ciclo para Utilização da API Pública REST do CRTI ERP via chave de integração
 
 A chave de integração pode ser gerada no ERP em *Configurações do Sistema > Permissões > Usuário*. Deve se editar um usuário, e na tela de cadastro, clicar me *Chaves (API)*. Nessa tela, selecione *Gerar chave*, dê um nome que identifique o uso da chave. A chave irá ser exibida apenas 1x. Ao fechar janela, se necessitar da chave novamente, será que invalidar e gerar uma nova. Armazenar a chave gerada de forma segura. Evitar guarda-la em arquivos texto ou em meios não criptografados.
