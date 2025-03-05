@@ -20,8 +20,8 @@ A seguir, serão descritos os tipos de integrações disponíveis no CRTI ERP, q
 * [CSV](csv/README.md)
 * [Arquivos texto](txt/README.md)
 * [XML](xml/README.md)
-* [Webhooks](webhooks/README.md) 
-* [Abastecimentos](abastecimentos/README.md)
-* [Usinas de Concreto](usinas_concreto/README.md)
+* [Webhooks](webhooks/README.md)
+* [Abastecimentos](abastecimentos/README_ABASTECIMENTO.md)
+* [Usinas de Concreto](usinas_concreto/README_USINA.md)
 
 Essas opções permitem uma flexibilidade considerável na integração do sistema com outras ferramentas e processos, atendendo às necessidades diversas dos desenvolvedores e das empresas que utilizam o CRTI ERP.
