@@ -1,5 +1,7 @@
 # Integração de Abastecimentos
 
+<img src="../imagens/logoCrti.jpg" alt="Logo da CRTI" width="300">
+
 A integração de abastecimentos é um recurso do CRTI ERP que facilita a comunicação entre o sistema e outras ferramentas, como softwares de gestão de combustíveis, bombas de abastecimento, entre outros. Este recurso garante a atualização contínua dos dados dos postos de combustível, proporcionando informações precisas e atualizadas para a tomada de decisões.
 
 ---
@@ -79,4 +81,86 @@ Após o tratamento dos dados, o processamento pode seguir dois caminhos:
 
 ---
 
-**Documentação referente à data de criação: 05/03/2025**
+## Usabilidade e Configuração
+
+### 1. Acessando a Tela de Configuração
+
+- **Navegação:**  
+  Acesse o menu:  
+  `Gestão de Frota  Equipamentos` > `Cadastros` > `Configuração de Integração de Abastecimento`  
+  ![Caminho de Acesso](pathTelaConfiguracao.png)
+
+### 2. Cadastro e Configuração
+
+- **Aba Cadastro:**  
+  Clique na aba **Cadastro**.
+
+- **Tipo de Utilização:**  
+  Selecione o método de integração desejado:
+    - **Web Service (API)**
+    - **Excel**
+
+- **Filial:**  
+  Selecione a filial que será utilizada para a integração. (Cada filial só pode ter uma configuração.)
+
+- **Integrações Disponíveis:**  
+  Escolha a integração desejada entre as opções disponíveis.
+
+- **Campos Dinâmicos:**  
+  Dependendo do tipo de integração selecionado, os campos exibidos se tornam dinâmicos e obrigatórios:
+    - **URL de Integração:**  
+      Varia de acordo com a integração escolhida. Exemplos:
+        - CTA: `https://www.ctasmart.com.br:8443`
+        - Evoluma: `http://179.127.12.14:8080`
+        - GTFrota: `http://200.150.115.61`
+        - Polisoftware: `https://4zzfd4roya9y.share.zrok.io`
+
+      > **Nota:**  
+      > Há validações para campos obrigatórios e formatação. Por exemplo, o campo de URL deve conter uma URL válida.
+
+- **Campos Sensíveis:**  
+  Informações como Login, Senha, Token e Id do Posto podem variar de cliente para cliente. Em alguns casos, até a URL poderá ser personalizada.
+
+### 3. Salvando a Configuração
+
+- Após preencher todos os campos obrigatórios, salve a configuração.  
+  ![Exemplo de Configuração](exemploConfig.png)
+
+### 4. Registro e Monitoramento
+
+- **Execução Automática:**  
+  Uma vez configurada, a integração será executada automaticamente a cada 10 minutos, conforme descrito na seção **Requisição Automática**.
+
+- **Log de Requisições:**  
+  Todas as requisições são registradas. Visualize os logs na aba **Log**.  
+  ![Exemplo de Log](exemploLog.png)
+
+### 5. Reimportação de Dados
+
+- Se necessário, utilize o botão **reimportar** para atualizar os dados manualmente.
+  > **Nota:**  
+  > A reimportação pode ser feita de forma manual e pode abranger períodos retroativos conforme a data do lote.
+
+### 6. Tela de Integração
+
+- **Acesso à Tela de Integração:**  
+  Navegue até:  
+  `Gestão de Suprimentos` > `Integrações` > `Integração - Abastecimento`  
+  ![Tela de Integração](pathIntegracao.png)
+
+> **Observação Importante:**
+> - Os lotes são criados automaticamente na virada do dia, mesmo que não contenham abastecimentos.
+> - Uma vez que o lote é liberado, não serão realizadas novas requisições para ele. Caso ocorram novos abastecimentos no mesmo dia, os itens do lote liberado poderão ser duplicados. Por esse motivo, recomenda-se realizar o fluxo de integração no dia seguinte.
+> - Ao processar o lote, o sistema efetua os lançamentos de acordo com o fluxo de entrada/saída de estoque conforme o configurado.
+> - É possível vincular serviços aos equipamentos, alterar o tipo de aplicação de um item e associar um contrato/subempreiteiro.
+>
+> **Informações Importantes para Integração:**
+> - O equipamento só será vinculado se houver informações de Horímetro/Odometria e Placa.
+> - A pesquisa de equipamento é realizada prioritariamente pela placa cadastrada na tela de equipamentos. Se não for encontrada, será realizada uma busca pelo apelido disponibilizado pela API, que deve ser idêntico ao cadastro do equipamento.
+> - O vínculo de materiais é realizado de acordo com o nome do material ou o código de integração do material disponibilizado pela API. Os cadastros devem ser idênticos aos informados pela API.
+> - Essas informações também são válidas para a integração via Excel. Exceto a da criação do lote que deve ser feita manualmente.
+
+---
+
+**Documentação referente à data de criação: 06/03/2025**
+<img src="../imagens/logoCrti.jpg" alt="Logo da CRTI" width="300">
