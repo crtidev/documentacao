@@ -159,6 +159,7 @@ Após o tratamento dos dados, o processamento pode seguir dois caminhos:
 > - A pesquisa de equipamento é realizada prioritariamente pela placa cadastrada na tela de equipamentos. Se não for encontrada, será realizada uma busca pelo apelido disponibilizado pela API, que deve ser idêntico ao cadastro do equipamento.
 > - O vínculo de materiais é realizado de acordo com o nome do material ou o código de integração do material disponibilizado pela API. Os cadastros devem ser idênticos aos informados pela API.
 > - Essas informações também são válidas para a integração via Excel. Exceto a da criação do lote que deve ser feita manualmente.
+> - Após todas essas condições se não for possível localizar o equipamento o item será tratado como "Centro de Aplicação".
 
 ---
 
