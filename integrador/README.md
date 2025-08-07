@@ -1,10 +1,12 @@
 # Integração Usina de Concreto
 
 <p align="center">
-  <img src="img/logoCrtiErp.png" alt="Logo CrtiErp" width="200"/>
+  <img src="imagens/logoCrti.jpg" alt="Logo CrtiErp" width="200"/>
 </p>
 
 Este projeto consiste no software responsável por integrar as operações de entrada e saída da Usina de Concreto com o CRTI ERP.
+
+Guia de solução de possiveis problemas: * [Solução de problemas](/integrador/Solucao.md)
 
 ***
 
@@ -115,5 +117,5 @@ Após a configuração, o uso do serviço é simples:
 
 **Documentação referente à data de criação: 30/07/2025**
 <p align="center">
-  <img src="img/logoCrtiErp.png" alt="Logo CrtiErp" width="200"/>
+  <img src="imagens/logoCrti.jpg" alt="Logo CrtiErp" width="200"/>
 </p>
