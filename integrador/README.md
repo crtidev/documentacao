@@ -55,7 +55,7 @@ Siga os passos abaixo para instalar e configurar o integrador no ambiente Window
 4. **Iniciar o Serviço:**
     - Abra a ferramenta de serviços do Windows (digite "serviços" na pesquisa do Windows).
     - Localize e inicie o serviço denominado **CRTI Integrador Usina Concreto**.]
-    - Após a Configuração da comunicação é necessário reniciar o serviço.
+    - Após a Configuração da comunicação é necessário reiniciar o serviço.
 
 5. **Acessar a Interface Web:**
     - Abra o navegador e acesse: [http://localhost:5000](http://localhost:5000).
